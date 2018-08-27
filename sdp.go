@@ -66,7 +66,7 @@ func (s SDP) NewTask(subject, body string) (string, error) {
 	uri := "http://" + s.Server + ":" + s.Port + "/sdpapi/request"
 
 	//Replace & from body request
-	body = strings.Replace(body, "&", "+", -1) //Replace & - don'twork
+	//body = strings.Replace(body, "&", "+", -1) //Replace & - don'twork
 
 	fmt.Println(`!!!!BODY REQUEST:format=json&OPERATION_NAME=ADD_REQUEST&INPUT_DATA={"operation": {"details": {"requester": "Watcom robot","subject": "` + subject + `","description": "` + body + `","priority": "High"}}}`)
 
